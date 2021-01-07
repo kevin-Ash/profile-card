@@ -1,0 +1,121 @@
+/* Import font Kumbh Sans : 400, 700 */
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+/* Document reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style variables */
+:root {
+    /* Primary */
+    --darkCyan: hsl(185, 75%, 39%);
+    --veryDarkDesatBlue: hsl(229, 23%, 23%);
+    --darkGreyBlue: hsl(227, 10%, 46%);
+    /* Neutral */
+    --darkGray: hsl(0, 0%, 59%);
+    /* Font */
+    --mainFont:'Kumbh Sans', sans-serif;
+    /* Font Weights*/
+    --weight400: 400;
+    --weight700: 700;
+}
+
+/* Custom class components */
+.heading {
+    font-weight: var(--weight700);
+}
+.info-grey {
+    color: var(--darkGray);
+}
+.flex {
+    display: flex;
+}
+.grid {
+    display: grid;
+}
+/* Body reset */
+body {
+    font-size: 1.25rem;
+    font-family: var(--mainFont);
+    color: var(--veryDarkDesatBlue);
+}
+
+/* Page container */
+.page-container{
+    padding: 1.5rem 0.5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("images/bg-pattern-top.svg"),
+    url("images/bg-pattern-bottom.svg");
+    background-repeat: no-repeat;
+    background-position: -50% 150%, 130% -125%;
+    background-color: var(--darkCyan);
+}
+/* Profile Card */
+.profile-card {
+    flex-direction: column;
+    width: 350px;
+    background-color: #fefefe;
+    border-radius: 0.8rem;
+    position: relative;
+    top: 0;
+    z-index: 1;
+}
+.card-header {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    background: 
+    url('./images/bg-pattern-card.svg')
+    no-repeat
+    center/cover;
+    height: 8rem;
+}
+.img-container {
+    position: absolute;
+    left: 125px;
+    top: 20%;
+    border-radius: 100%;
+    padding: 0.5rem;
+    background-color: #fefefe;
+}
+.img-container img {
+    border-radius: 100%;
+}
+.card-body {
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    top: 20%;
+    margin: 1.25rem 0 1rem 0;
+}
+.card-footer {
+    border-top: 1px solid var(--darkGray);
+    margin-top:25%;
+    background: transparent;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    padding: 1.25rem 0.5rem;
+}
+/* Footer attribution styling */
+.attribution { 
+    padding: 1rem;
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+/* For mobile view < 375px */
+@media (max-width: 375px) {
+    .profile-card {
+        min-width: 290px;
+    }
+}
